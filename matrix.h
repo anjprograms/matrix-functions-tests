@@ -65,7 +65,7 @@ matrix reducedRowEchelon(const matrix A);
 
 // augments matrix A with the identity matrix of the same size and performs gaussian elimination to find the inverse of A
 matrix inverse(const matrix A);
-
+//no
 // Solves a matrix vector equation of form Ax=b using Gaussian elimination
 vector<double> matrixVectorEqGauss(const matrix A, const vector<double> b);
 
