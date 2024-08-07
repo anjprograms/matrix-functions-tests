@@ -1,7 +1,6 @@
 #include "matrix.h"
 
 // initialize tests for each function here
-// each one should tell a story of how the function works
 void TEST_loadFuncs();
 void TEST_equal();
 void TEST_multiplication();
@@ -26,11 +25,17 @@ int main()
     //TEST_transpose();
     //TEST_augment();
     //TEST_gaussElim();
-    TEST_rref();
+    //TEST_rref();
     //TEST_inverse();
     //TEST_matrixVecSolve();
     //TEST_LUfact();
 }
+
+
+
+
+
+
 
 void TEST_loadFuncs(){
 cout << "______________________________________________________" << endl;
