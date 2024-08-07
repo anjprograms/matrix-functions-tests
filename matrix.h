@@ -47,11 +47,8 @@ matrix rowSwap(const matrix A, int r1, int r2);
 
 //returns the transpose of the input matrix
 matrix transpose(const matrix A);
-<<<<<<< HEAD
  
-=======
 
->>>>>>> 1f5b2da7433751610ede354a7cc7d8dd85d063f1
 // extends matrix A rightwards with vector b if the size is compatible
 matrix augmentVector(const matrix A, const vector<double> b);
 
