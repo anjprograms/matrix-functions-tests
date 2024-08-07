@@ -254,25 +254,6 @@ matrix transpose(const matrix A){
     return t;
 }
 
-// anything not folded/ with a ; is incomplete
-
-//TODO
-/*
-        - review gaussianelim
-        - research on why gauss sucks and other better complexity ways of approaching these problems
-        - write all test functions
-        - write a script and record a video
-        - send to dad
-
-    done
-        - rref function finalize
-        - test inverse
-        - matrix vector solve
-        - lu fact
-
-
-*/
-
 matrix gaussianElimination(const matrix A){    
     double EPS = 1e-10; //stands for epsilon, this is a small constant value used to account for floating-point precision issues in numerical computations
     matrix gauss = A; // copy matrix A into gauss
@@ -500,35 +481,33 @@ vector<matrix> LUfact(const matrix A){
     matrix L = loadZero(size, size);
     matrix U = loadZero(size, size);
 
-    // Decomposing matrix into Upper and Lower
-    // triangular matrix
     for (int i = 0; i < size; i++) 
     {
-        // Upper Triangular
+        // upper triangular
         for (int k = i; k < size; k++)
         {
-            // Summation of L(i, j) * U(j, k)
+            // summation of L[i[j] * U[j][k]
             int sum = 0;
             for (int j = 0; j < i; j++)
                 sum += (L.data[i][j] * U.data[j][k]);
 
-            // Evaluating U(i, k)
+            // evaluating U[i][k]
             U.data[i][k] = A.data[i][k] - sum;
         }
 
-        // Lower Triangular
+        // lower triangular
         for (int k = i; k < size; k++) 
         {
             if (i == k)
-                L.data[i][i] = 1; // Diagonal as 1
+                L.data[i][i] = 1; // diagonal as 1
             else 
             {
-                // Summation of L(k, j) * U(j, i)
+                // summation of L[k][j] * U[j][i]
                 int sum = 0;
                 for (int j = 0; j < i; j++)
                     sum += (L.data[k][j] * U.data[j][i]);
 
-                // Evaluating L(k, i)
+                // evaluating L[k][i]
                 L.data[k][i]
                     = (A.data[k][i] - sum) / U.data[i][i];
             }

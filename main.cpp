@@ -33,10 +33,6 @@ int main()
 
 
 
-
-
-
-
 void TEST_loadFuncs(){
 cout << "______________________________________________________" << endl;
     cout << "matrix loadMatrix(int rows, int cols, vector<double> d)" << endl << "matrix loadZero(int rows, int cols)" << endl << "matrix createIdentity(int size)" << endl << endl;
@@ -326,6 +322,9 @@ void TEST_LUfact(){
     printMatrix(L, "L");
     printMatrix(U, "U");
     printMatrix(matrixMultiplication(L,U), "L*U");
+    cout << endl << "No pivoting algorithm has been implemented for avoiding numerical instability due to lack of time" << endl;
+    cout << "______________________________________________________" << endl;
+
 
 }
 
