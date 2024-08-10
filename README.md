@@ -3,7 +3,9 @@
 # Matrix Functions
 
 Anjali Velamala
+
 CSPB 2270-003: Data Structures & Algorithms
+
 Final Project : Implementing Matrix Functionalities
 
 
