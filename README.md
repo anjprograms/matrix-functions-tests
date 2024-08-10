@@ -10,7 +10,7 @@ Final Project : Implementing Matrix Functionalities
 **Compile:** g++ -Wall -Werror -Wpedantic -std=c++17 main.cpp matrix.cpp
 **Run:** ./a.out
 
-Video: 
+Video: https://drive.google.com/file/d/1YfAE6K88uH3V6ZOpKPmpg78ddHMexBon/view?usp=share_link
 
 
 ## Motivation
