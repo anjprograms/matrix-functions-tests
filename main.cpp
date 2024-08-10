@@ -1,4 +1,5 @@
 #include "matrix.h"
+using namespace std;
 
 // initialize tests for each function here
 void TEST_loadFuncs();

@@ -254,7 +254,7 @@ matrix transpose(const matrix A){
     return t;
 }
 
-matrix gaussianElimination(const matrix A){    
+matrix gaussianElimination(const matrix A){
     double EPS = 1e-10; //stands for epsilon, this is a small constant value used to account for floating-point precision issues in numerical computations
     matrix gauss = A; // copy matrix A into gauss
 
