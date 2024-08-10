@@ -35,13 +35,15 @@ The primary goal of this project is to create a group of functions that can perf
 Matrix operations are at the heart of numerous algorithms in machine learning and data science. By implementing these operations from scratch, I will gain a deeper understanding of their computational complexity and efficiency. This understanding is critical as it influences algorithm design and optimization, particularly when working with large datasets. Moreover, this project serves as an intersection between theoretical linear algebra and practical programming, providing a tangible way to apply mathematical concepts.
 
 ## Technical Challenges and Learning Opportunities
-**Efficiency and Optimization**
+**Efficiency and Optimization:**
+
 I used Gaussian elimination as a basis for all of my other more complicated functions, this algorithm is $O(n^3)$ so my functions are not efficient especially for large matrices.
 
 The idea behind solving using any factorization method is to decouple the factorization phase from the actual solving phase because the factorization phase is usually more complex. The factorization phase only needs matrix $A$, while the actual solving phase uses the factored form of $A$ and the right hand side to solve the linear system. So, once we have the factorization, we can make use of the factored form of $A$, to solve for different right hand sides at a relatively moderate computational cost. The cost of factorizing the matrix 𝐴 into $LU$ is $O(n^3)$. With this factorization, the cost of solving is just $O(n^2)$.
 
 
-**Numerical Stability**
+**Numerical Stability:**
+
 When applicable I checked for division by zero and I also used a small epsilon value to account for floating-point precision issues in numerical computations performed. Setting a value to zero if val < |epsilon|. 
 I also applied pivoting methods when useful. In my Gaussian elimination function the pivot was always the largest. I wasn't able to finish the pivoting for my LU factorization function.
 
